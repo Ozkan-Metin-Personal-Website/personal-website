@@ -1,0 +1,68 @@
+html, body {
+    /*height: 100%;*/
+    margin: 0px;
+    font-size: 14px;
+    font-family: sans-serif;
+
+}
+
+header {
+    background-color: gray;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+footer {
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: left;
+}
+
+nav {
+    text-align: right;
+    color: white;
+}
+
+nav.links {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav span.active {
+    background-color: black;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:link {
+    background-color: blue;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:visited {
+    background-color: blue;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+main {
+    padding: 20px;
+    max-width: 50%;
+}
+
+#name {
+    color: white;
+    float: left;
+}
