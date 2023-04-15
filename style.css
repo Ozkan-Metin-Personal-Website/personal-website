@@ -3,7 +3,7 @@ html, body {
     margin: 0px;
     font-size: 14px;
     font-family: sans-serif;
-
+    background-color: lightgray;
 }
 
 header {
@@ -65,4 +65,13 @@ main {
 #name {
     color: white;
     float: left;
+}
+
+.formSection {
+    margin: 20px;
+}
+
+.formtitle {
+    font-size: 18px;
+    font-weight: bold;
 }

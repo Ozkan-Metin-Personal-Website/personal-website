@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me : Ozkan Metin</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script type="text/javascript" src="javascript.js"></script>-->
+</head>
+<body>
+    <header>
+        <span id="name">OZKAN METIN</span>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <span class="active">CONTACT ME</span>
+        </nav>
+    </header>
+    <div class="formSection">
+        <form action="POST" id="form" name="form">
+            <span class="formtitle">Contact Form</span><br><br>
+            We're open for any suggestion:<br><br>
+            <p><label for="name">Full Name:</label><br><input type="text" name="name" id="name" maxlength="200" width="40"></p>
+            <p><label for="email">E-mail:</label><br><input type="text" name="email" id="email" maxlength="200" width="40"></p>
+            <p><label for="message">Message:</label><br><textarea id="message" name="message" rows="5" cols="40"></textarea></p>
+            <p><input type="submit" name="submit" id="submit" value="Submit"></p>
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec'
+
+        form.addEventListener('submit', e => {
+            submitButton.disabled = true
+            e.preventDefault()
+            let requestBody = new FormData(form)
+            fetch(scriptURL, { method: 'POST', body: requestBody})
+            .then(response => {
+                alert('Success!', response)
+                submitButton.disabled = false
+                })
+            .catch(error => {
+            alert('Error!', error.message)
+                submitButton.disabled = false
+
+            }
+            )
+        })
+    </script>
+
+    <footer>
+        <p>(c) 2023 Ozkan Metin</p>
+    </footer>
+</body>
+</html>
